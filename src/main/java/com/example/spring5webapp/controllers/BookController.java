@@ -10,9 +10,11 @@ public class BookController {
 
     private final BookRepository bookRepository;
 
+    // Spring dependency injection
     public BookController(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
+
 
     @RequestMapping("/books")
     public String getBooks(Model model) {
